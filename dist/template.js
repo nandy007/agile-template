@@ -1,4 +1,9 @@
-
+/*
+*	Template JS模板引擎
+*	Version	:	1.0.0 beta
+*	Author	:	nandy007
+*   License MIT @ https://github.com/nandy007/template
+*/
 (function(){
 
 	var _templateCache = {},_compileCache = {},
