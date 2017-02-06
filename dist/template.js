@@ -22,7 +22,7 @@
 			if(typeof document!='undefined'&&document.getElementById){
 				return document.getElementById(id);
 			}else{
-				return require('Document').getElementById(id);
+				return require('Document').getElement(id);
 			}
 		},
 		cache : {//内置函数和自定义函数调用全部存放于_helper.cache里
