@@ -40,7 +40,7 @@ for(var i=0,len=tagCloud.length;i<len;i++){
 ```
 代码中可通过script的id引用，如：
 ```javascript
-var html = template('tag_cloud', {
+var html = template('demo_script', {
     tagCloud : [
 		{is_selected:true, title:'Agile Lite框架', text:'<b>MVP模式</b>'},
 		{is_selected:false, title:'Agile VM框架', text:'MVVM模式'},
