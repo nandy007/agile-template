@@ -2,8 +2,8 @@
 Agile Template是一个JS模板引擎框架。
 
 ##用法：
-1.下载或者克隆git之后，将dist目录下的template.js文件加入到web工程中。
-2.在html页面引入template.js文件。
+1.下载或者克隆git之后，将dist目录下的template.js文件加入到web工程中。<br/>
+2.在html页面引入template.js文件。<br/>
 3.在html页面中使用
 ```javascript
 /**
@@ -51,9 +51,9 @@ var html = template('tag_cloud', {
 });
 ```
 ### 形式二（模板的唯一标识）：
-需要事先通过template.setter(id, content);来设定模板唯一标识。
-其中id为模板的唯一标识，不可与script模板活着其他模板标识一样；content为模板内容。
-一般用于JS中预置模板，提高模板读取速度。
+需要事先通过template.setter(id, content);来设定模板唯一标识。<br/>
+其中id为模板的唯一标识，不可与script模板活着其他模板标识一样；content为模板内容。<br/>
+一般用于JS中预置模板，提高模板读取速度。<br/>
 比如：
 ```javascript
 template.setter('newtemplate', "<div id='tag_cloud'><%for(var i=0,len=tagCloud.length;i<len;i++){var ctx = tagCloud[i];%><a href='#' class='tag_item<% if(ctx['is_selected']){ %> selected<%}%>' title='<%=ctx['title']%>'><%=ttt%><%=#add(ctx['text'])%></a><br/><%}%></div>");
@@ -69,7 +69,7 @@ var html = template('newtemplate', {
 ```
 
 ### 形式三（模板内容）：
-直接使用模板内容字符串，一般不建议这么使用。
+直接使用模板内容字符串，一般不建议这么使用。<br/>
 比如：
 ```javascript
 var html = template("<div id='tag_cloud'><%for(var i=0,len=tagCloud.length;i<len;i++){var ctx = tagCloud[i];%><a href='#' class='tag_item<% if(ctx['is_selected']){ %> selected<%}%>' title='<%=ctx['title']%>'><%=ttt%><%=#add(ctx['text'])%></a><br/><%}%></div>", {
@@ -83,9 +83,9 @@ var html = template("<div id='tag_cloud'><%for(var i=0,len=tagCloud.length;i<len
 });
 ```
 
-如何为模板添加自定义函数？
-可以通过template.helper(funcName, funcHandler);方法添加自定义函数.
-其中funcName为在模板中调用方法使用的方法名；funcHandler为调用此方法时的处理函数，函数接受的参数取决于调用函数的时候的传参。
+如何为模板添加自定义函数？<br/>
+可以通过template.helper(funcName, funcHandler);方法添加自定义函数.<br/>
+其中funcName为在模板中调用方法使用的方法名；funcHandler为调用此方法时的处理函数，函数接受的参数取决于调用函数的时候的传参。<br/>
 比如：
 ```javascript
 template.helper('add', function(str){
